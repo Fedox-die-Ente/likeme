@@ -1,6 +1,8 @@
 # 🚀 LikeME
 
-A short, concise description of your project. What does it do and why is it useful?
+LikeME is an open-source project that allows you to add a like button to your GitHub profile README. With just one
+click, visitors can show their appreciation for your profile, and you can display
+dynamic badges showcasing your likes. Built with Nuxt.js, TypeScript, Tailwind CSS, and Prisma.
 
 <div align="center">
 
