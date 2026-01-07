@@ -1,4 +1,4 @@
-# 🚀 Project Name
+# 🚀 LikeME
 
 A short, concise description of your project. What does it do and why is it useful?
 
@@ -62,16 +62,16 @@ npm run dev
 
 ## ✨ Features
 
-- 🎨 **Beautiful UI** - Modern and responsive design
-- ⚡ **Fast Performance** - Optimized for speed
-- 🔧 **Customizable** - Highly configurable
-- 📱 **Mobile Friendly** - Works on all devices
-- 🌙 **Dark Mode** - Built-in theme switching
-- 🔐 **Secure** - Following security best practices
-- 🌍 **i18n Support** - Multi-language support
-- 📊 **Analytics** - Built-in analytics
-- 🔄 **Real-time Updates** - Live data synchronization
-- 💾 **Offline Support** - Works without internet connection
+- ♥️ **Like System** - Let people like your GitHub profile with one click
+- 🎨 **Beautiful Badges** - Dynamic SVG badges showing your likes, bio, and stats
+- 👤 **User Profiles** - Personal dashboard to manage your profile and bio
+- 📊 **Like Analytics** - See who likes you and track your popularity
+- 🔐 **GitHub OAuth** - Secure authentication via GitHub
+- 📱 **Responsive Design** - Works perfectly on all devices
+- ⚡ **Fast Performance** - Optimized with caching and efficient queries
+- 🎯 **Easy Integration** - Add to your README with one line of code
+- 🇩🇪 **Legal Compliance** - GDPR-compliant with German Impressum & Privacy Policy
+- 🗑️ **Data Control** - Delete your account and data anytime
 
 ## 🛠️ Installation
 
@@ -116,17 +116,20 @@ Before you begin, ensure you have the following installed:
 ### Alternative Installation Methods
 
 #### Using Docker
+
 ```bash
 docker build -t project-name .
 docker run -p 3000:3000 project-name
 ```
 
 #### Using Docker Compose
+
 ```bash
 docker-compose up
 ```
 
 #### Using Yarn
+
 ```bash
 yarn install
 yarn dev
@@ -137,11 +140,11 @@ yarn dev
 ### Basic Usage
 
 ```javascript
-import { ProjectName } from 'project-name';
+import {ProjectName} from 'project-name';
 
 const app = new ProjectName({
-  apiKey: 'your-api-key',
-  theme: 'dark'
+    apiKey: 'your-api-key',
+    theme: 'dark'
 });
 
 app.initialize();
@@ -151,17 +154,17 @@ app.initialize();
 
 ```javascript
 const config = {
-  theme: 'dark',
-  language: 'en',
-  features: {
-    analytics: true,
-    notifications: true,
-    offline: false
-  },
-  customStyles: {
-    primaryColor: '#0066cc',
-    fontFamily: 'Inter, sans-serif'
-  }
+    theme: 'dark',
+    language: 'en',
+    features: {
+        analytics: true,
+        notifications: true,
+        offline: false
+    },
+    customStyles: {
+        primaryColor: '#0066cc',
+        fontFamily: 'Inter, sans-serif'
+    }
 };
 
 const app = new ProjectName(config);
@@ -181,10 +184,10 @@ console.log(result);
 
 ```javascript
 try {
-  const result = await projectName.process(data);
-  handleSuccess(result);
+    const result = await projectName.process(data);
+    handleSuccess(result);
 } catch (error) {
-  handleError(error);
+    handleError(error);
 }
 ```
 
@@ -192,9 +195,9 @@ try {
 
 ```javascript
 const options = {
-  timeout: 5000,
-  retries: 3,
-  cache: true
+    timeout: 5000,
+    retries: 3,
+    cache: true
 };
 
 const result = await projectName.process(data, options);
@@ -205,9 +208,11 @@ const result = await projectName.process(data, options);
 <div align="center">
 
 ### Desktop View
+
 <img src="https://placehold.co/800x500?text=Desktop+Screenshot" alt="Desktop Screenshot" width="80%">
 
 ### Mobile View
+
 <img src="https://placehold.co/300x600?text=Mobile+Screenshot" alt="Mobile Screenshot" width="30%">
 
 </div>
@@ -307,9 +312,11 @@ You can also use a configuration file:
 ### Authentication
 
 #### POST `/api/auth/login`
+
 Login a user
 
 **Request Body:**
+
 ```json
 {
   "email": "user@example.com",
@@ -318,6 +325,7 @@ Login a user
 ```
 
 **Response:**
+
 ```json
 {
   "token": "jwt-token",
@@ -330,9 +338,11 @@ Login a user
 ```
 
 #### POST `/api/auth/register`
+
 Register a new user
 
 **Request Body:**
+
 ```json
 {
   "name": "John Doe",
@@ -344,14 +354,17 @@ Register a new user
 ### Users
 
 #### GET `/api/users`
+
 Get all users
 
 **Query Parameters:**
+
 - `page` (optional): Page number (default: 1)
 - `limit` (optional): Items per page (default: 10)
 - `search` (optional): Search term
 
 **Response:**
+
 ```json
 {
   "users": [
@@ -372,9 +385,11 @@ Get all users
 ```
 
 #### GET `/api/users/:id`
+
 Get user by ID
 
 **Response:**
+
 ```json
 {
   "id": 1,
@@ -421,14 +436,14 @@ tests/
 ### Writing Tests
 
 ```javascript
-import { render, screen } from '@testing-library/react';
-import { Header } from '../components/Header';
+import {render, screen} from '@testing-library/react';
+import {Header} from '../components/Header';
 
 describe('Header Component', () => {
-  test('renders header title', () => {
-    render(<Header title="Test Title" />);
-    expect(screen.getByText('Test Title')).toBeInTheDocument();
-  });
+    test('renders header title', () => {
+        render(<Header title="Test Title"/>);
+        expect(screen.getByText('Test Title')).toBeInTheDocument();
+    });
 });
 ```
 
@@ -469,30 +484,34 @@ docker run -p 3000:3000 project-name
 ### Environment-specific Deployments
 
 - **Development**: Automatically deployed on push to `develop` branch
-- **Staging**: Automatically deployed on push to `staging` branch  
+- **Staging**: Automatically deployed on push to `staging` branch
 - **Production**: Automatically deployed on push to `main` branch
 
 ## 🛣️ Roadmap
 
 ### Version 1.0.0 (Current)
+
 - [x] Basic functionality
 - [x] User authentication
 - [x] Responsive design
 - [x] Dark mode support
 
 ### Version 1.1.0 (In Progress)
+
 - [ ] Advanced search functionality
 - [ ] Export/Import features
 - [ ] Mobile app
 - [ ] Push notifications
 
 ### Version 2.0.0 (Planned)
+
 - [ ] AI-powered features
 - [ ] Advanced analytics
 - [ ] Third-party integrations
 - [ ] Performance optimizations
 
 ### Future Considerations
+
 - [ ] Desktop application
 - [ ] Plugin system
 - [ ] Advanced customization
@@ -557,59 +576,70 @@ npm run dev
 Found a bug? Please use our [🐛 Bug Report template](.github/ISSUE_TEMPLATE/bug_report.md) when creating an issue.
 
 ### Required Information
-- 🐞 **Description** – What exactly went wrong?  
-- 🔁 **Steps to Reproduce** – How can we replicate the bug?  
-- ✅ **Expected Behavior** – What should have happened instead?  
-- 📸 **Screenshots** – If possible, add screenshots or GIFs  
-- 🖥️ **Environment** – OS, browser, Node.js version, project version  
+
+- 🐞 **Description** – What exactly went wrong?
+- 🔁 **Steps to Reproduce** – How can we replicate the bug?
+- ✅ **Expected Behavior** – What should have happened instead?
+- 📸 **Screenshots** – If possible, add screenshots or GIFs
+- 🖥️ **Environment** – OS, browser, Node.js version, project version
 - ➕ **Additional Context** – Any extra info that could help
 
-👉 Create a new bug report here: [New Bug Report](https://github.com/username/project-name/issues/new?template=bug_report.md)
+👉 Create a new bug report
+here: [New Bug Report](https://github.com/username/project-name/issues/new?template=bug_report.md)
 
 ## 💡 Feature Requests
 
-Got an idea for improvement? Use our [💡 Feature Request template](.github/ISSUE_TEMPLATE/feature_request.md) to share it.
+Got an idea for improvement? Use our [💡 Feature Request template](.github/ISSUE_TEMPLATE/feature_request.md) to share
+it.
 
 ### Required Information
-- ✨ **Feature Description** – What should be added/changed?  
-- 🎯 **Motivation & Problem** – Why is this feature valuable?  
-- 🛠️ **Proposed Solution** – How could it be implemented?  
-- 🔄 **Alternatives** – Any other approaches you considered  
-- 📸 **Mockups / Screenshots** – Optional design or concept images  
-- ➕ **Additional Context** – Extra notes, links, or references  
 
-👉 Submit your idea here: [New Feature Request](https://github.com/username/project-name/issues/new?template=feature_request.md)
+- ✨ **Feature Description** – What should be added/changed?
+- 🎯 **Motivation & Problem** – Why is this feature valuable?
+- 🛠️ **Proposed Solution** – How could it be implemented?
+- 🔄 **Alternatives** – Any other approaches you considered
+- 📸 **Mockups / Screenshots** – Optional design or concept images
+- ➕ **Additional Context** – Extra notes, links, or references
+
+👉 Submit your idea
+here: [New Feature Request](https://github.com/username/project-name/issues/new?template=feature_request.md)
 
 ## 📚 Documentation
 
-If you notice missing, unclear, or outdated documentation, please use our [📚 Documentation template](.github/ISSUE_TEMPLATE/documentation.md).
+If you notice missing, unclear, or outdated documentation, please use
+our [📚 Documentation template](.github/ISSUE_TEMPLATE/documentation.md).
 
 ### Required Information
-- 📖 **Issue Description** – What part of the docs is unclear/missing/outdated?  
-- 🗂️ **Location** – File, section, or link  
-- ✅ **Suggested Improvements** – How should it be improved?  
-- 📸 **Screenshots** – If applicable  
-- ➕ **Additional Context** – Extra notes or references  
 
-👉 Report a documentation issue here: [New Documentation Issue](https://github.com/username/project-name/issues/new?template=documentation.md)
+- 📖 **Issue Description** – What part of the docs is unclear/missing/outdated?
+- 🗂️ **Location** – File, section, or link
+- ✅ **Suggested Improvements** – How should it be improved?
+- 📸 **Screenshots** – If applicable
+- ➕ **Additional Context** – Extra notes or references
+
+👉 Report a documentation issue
+here: [New Documentation Issue](https://github.com/username/project-name/issues/new?template=documentation.md)
 
 ## 📑 General Issues
 
 For discussions, questions, or other ideas, use our [📝 General Issue template](.github/ISSUE_TEMPLATE/general_issue.md).
 
 ### Required Information
-- 📝 **Summary** – A clear and concise description of the issue  
-- 🤔 **Context** – Why are you opening this issue? (discussion, feedback, question)  
-- 🎯 **Goal** – What do you want to achieve with this issue?  
-- ➕ **Additional Notes** – Extra details, links, or references  
 
-👉 Open a general issue here: [New General Issue](https://github.com/username/project-name/issues/new?template=general_issue.md)
+- 📝 **Summary** – A clear and concise description of the issue
+- 🤔 **Context** – Why are you opening this issue? (discussion, feedback, question)
+- 🎯 **Goal** – What do you want to achieve with this issue?
+- ➕ **Additional Notes** – Extra details, links, or references
+
+👉 Open a general issue
+here: [New General Issue](https://github.com/username/project-name/issues/new?template=general_issue.md)
 
 ## 📝 Changelog
 
 ### [1.0.0] - 2024-01-15
 
 #### Added
+
 - Initial release
 - User authentication system
 - Basic CRUD operations
@@ -617,19 +647,23 @@ For discussions, questions, or other ideas, use our [📝 General Issue template
 - Dark mode support
 
 #### Changed
+
 - Updated dependencies
 - Improved performance
 
 #### Fixed
+
 - Fixed login bug
 - Resolved mobile layout issues
 
 #### Removed
+
 - Deprecated old API endpoints
 
 ### [0.9.0] - 2023-12-01
 
 #### Added
+
 - Beta release
 - Core functionality
 
@@ -702,6 +736,7 @@ Create an issue in the GitHub repository with a detailed description of the prob
 ### Inspiration
 
 This project was inspired by:
+
 - [Project Name](https://example.com) - For the concept
 - [Design System](https://example.com) - For the design patterns
 - [Article/Tutorial](https://example.com) - For implementation ideas
@@ -717,19 +752,23 @@ This project was inspired by:
 ## 🏅 Badges & Status
 
 ### Build Status
+
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/username/project-name/ci.yml?branch=main&style=for-the-badge&label=CI)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/username/project-name/deploy.yml?branch=main&style=for-the-badge&label=Deploy)
 
 ### Code Quality
+
 ![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/username/project-name?style=for-the-badge)
 ![Code Climate coverage](https://img.shields.io/codeclimate/coverage/username/project-name?style=for-the-badge)
 ![CodeFactor](https://img.shields.io/codefactor/grade/github/username/project-name?style=for-the-badge)
 
 ### Dependencies
+
 ![Dependencies](https://img.shields.io/librariesio/github/username/project-name?style=for-the-badge)
 ![Known Vulnerabilities](https://snyk.io/test/github/username/project-name/badge.svg?style=for-the-badge)
 
 ### Community
+
 ![Discord](https://img.shields.io/discord/123456789?style=for-the-badge&logo=discord&logoColor=white)
 ![Reddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/projectname?style=for-the-badge)
 
@@ -738,15 +777,19 @@ This project was inspired by:
 If you like the project, there are several ways you can support it:
 
 ### 🌟 Star the Repository
+
 Give the project a star on GitHub!
 
 ### ☕ Buy Me a Coffee
+
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/feeeedox)
 
 ### 💝 Sponsor
+
 [![GitHub Sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/Fedox-die-Ente)
 
 ### 🗣️ Spread the Word
+
 - Share on social media
 - Write a blog post
 - Tell your friends and colleagues
@@ -755,7 +798,8 @@ Give the project a star on GitHub!
 
 ### Reporting Security Vulnerabilities
 
-If you discover a security vulnerability, please send an email to security@example.com. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability, please send an email to security@example.com. All security vulnerabilities
+will be promptly addressed.
 
 ### Security Measures
 
@@ -807,14 +851,14 @@ To add a new language, see the [i18n documentation](docs/i18n.md).
 
 ```css
 :root {
-  --primary: #0066cc;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --info: #17a2b8;
-  --light: #f8f9fa;
-  --dark: #343a40;
+    --primary: #0066cc;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --info: #17a2b8;
+    --light: #f8f9fa;
+    --dark: #343a40;
 }
 ```
 
@@ -827,6 +871,7 @@ To add a new language, see the [i18n documentation](docs/i18n.md).
 ### Spacing
 
 The project uses an 8px spacing system:
+
 - `xs`: 4px
 - `sm`: 8px
 - `md`: 16px
@@ -838,39 +883,44 @@ The project uses an 8px spacing system:
 
 ### Production Dependencies
 
-| Package | Version | Purpose |
-|---------|---------|---------|
-| react | ^18.3.1 | UI library |
-| react-dom | ^18.3.1 | React DOM rendering |
-| lucide-react | ^0.344.0 | Icon library |
+| Package      | Version  | Purpose             |
+|--------------|----------|---------------------|
+| react        | ^18.3.1  | UI library          |
+| react-dom    | ^18.3.1  | React DOM rendering |
+| lucide-react | ^0.344.0 | Icon library        |
 
 ### Development Dependencies
 
-| Package | Version | Purpose |
-|---------|---------|---------|
-| vite | ^5.4.2 | Build tool |
-| typescript | ^5.5.3 | Type checking |
-| tailwindcss | ^3.4.1 | CSS framework |
-| eslint | ^9.9.1 | Code linting |
+| Package     | Version | Purpose       |
+|-------------|---------|---------------|
+| vite        | ^5.4.2  | Build tool    |
+| typescript  | ^5.5.3  | Type checking |
+| tailwindcss | ^3.4.1  | CSS framework |
+| eslint      | ^9.9.1  | Code linting  |
 
 ## 🔍 Monitoring & Analytics
 
 ### Performance Monitoring
+
 - [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) for performance tracking
 - [Web Vitals](https://web.dev/vitals/) monitoring
 
 ### Error Tracking
+
 - [Sentry](https://sentry.io/) for error tracking and performance monitoring
 
 ### Analytics
+
 - [Google Analytics](https://analytics.google.com/) for usage analytics
 - [Hotjar](https://www.hotjar.com/) for user behavior analysis
 
 ## 🏷️ Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For available versions, see the [tags in this repository](https://github.com/username/project-name/tags).
+We use [SemVer](http://semver.org/) for versioning. For available versions, see
+the [tags in this repository](https://github.com/username/project-name/tags).
 
 ### Version Format
+
 - **MAJOR**: Breaking changes
 - **MINOR**: New features (backwards compatible)
 - **PATCH**: Bug fixes (backwards compatible)
@@ -935,20 +985,18 @@ SOFTWARE.
 
 ### Project Links
 
-- **Documentation**: [docs.example.com](https://docs.example.com)
-- **Demo**: [demo.example.com](https://demo.example.com)
-- **Issues**: [GitHub Issues](https://github.com/username/project-name/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/username/project-name/discussions)
+- **Issues**: [GitHub Issues](https://github.com/Fedox-die-Ente/likeme/issues)
+- **Detailed Documentation**: [README_FEATURES.md](README_FEATURES.md)
 
 ---
 
 <div align="center">
 
-**[⬆ Back to Top](#-project-name)**
+**[⬆ Back to Top](#%EF%B8%8F-likeme)**
 
 Made with ❤️ by [Florian](https://github.com/Fedox-die-Ente)
 
-![Profile views](https://visitor-badge.laobi.icu/badge?page_id=Fedox-die-Ente&left_text=Profile+views)
+![Profile views](https://visitor-badge.laobi.icu/badge?page_id=Fedox-die-Ente.likeme&left_text=Profile+views)
 
 </div>
 
@@ -956,6 +1004,6 @@ Made with ❤️ by [Florian](https://github.com/Fedox-die-Ente)
 
 <div align="center">
 
-<sub>generated using [better-repo](https://github.com/Fedox-die-Ente/better-repo)</sub>
+<sub>README template generated using [better-repo](https://github.com/Fedox-die-Ente/better-repo)</sub>
 
 </div>

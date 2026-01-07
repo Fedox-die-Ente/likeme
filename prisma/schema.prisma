@@ -1,0 +1,38 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model User {
+  id            Int     @id @default(autoincrement())
+  githubId      Int     @unique
+  name          String? @unique
+  avatarUrl     String?
+  bio           String? @db.Text
+  createdAt     String?
+  likesReceived Like[]  @relation("LikesReceived")
+  likesGiven    Like[]  @relation("LikesGiven")
+}
+
+model Like {
+  id         Int      @id @default(autoincrement())
+  fromUserId Int
+  toUserId   Int
+  createdAt  DateTime @default(now())
+  fromUser   User     @relation("LikesGiven", fields: [fromUserId], references: [id], onDelete: Cascade)
+  toUser     User     @relation("LikesReceived", fields: [toUserId], references: [id], onDelete: Cascade)
+
+  @@unique([fromUserId, toUserId])
+  @@index([toUserId])
+  @@index([fromUserId])
+}
