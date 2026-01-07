@@ -12,10 +12,6 @@ A short, concise description of your project. What does it do and why is it usef
 
 </div>
 
-<div align="center">
-  <img src="https://i.imgur.com/EYTJNX8.png" alt="Project Banner" width="100%">
-</div>
-
 ## 📋 Table of Contents
 
 - [🚀 Quick Start](#-quick-start)
@@ -252,7 +248,7 @@ Give the project a star on GitHub!
 
 [![GitHub Sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/feeeedox)
 
-### Like me on LikeME
+### 👍 Like me on LikeME
 
 [![LikeME](https://likeme.fedox.ovh/api/badge/feeeedox)](https://likeme.fedox.ovh/u/feeeedox)
 
