@@ -338,13 +338,12 @@ SOFTWARE.
 ### Project Links
 
 - **Issues**: [GitHub Issues](https://github.com/feeeedox/likeme/issues)
-- **Detailed Documentation**: [README_FEATURES.md](README_FEATURES.md)
 
 ---
 
 <div align="center">
 
-**[⬆ Back to Top](#%EF%B8%8F-likeme)**
+**[⬆ Back to Top](#-likeme)**
 
 Made with ❤️ by [Florian](https://github.com/feeeedox)
 
