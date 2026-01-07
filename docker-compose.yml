@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: likeme_app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+
+      NUXT_OAUTH_GITHUB_CLIENT_ID: ${NUXT_OAUTH_GITHUB_CLIENT_ID}
+      NUXT_OAUTH_GITHUB_CLIENT_SECRET: ${NUXT_OAUTH_GITHUB_CLIENT_SECRET}
+
+      NUXT_SESSION_PASSWORD: ${NUXT_SESSION_PASSWORD}
+
+      NODE_ENV: production
+    networks:
+      - likeme_network
+    command: sh -c "npx prisma migrate deploy && npx prisma generate && node .output/server/index.mjs"
+
+networks:
+  likeme_network:
+    driver: bridge
+
+
